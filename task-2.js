@@ -1,19 +1,32 @@
-"use strict";
-
+let ingredientsList = document.querySelector( `#ingredients` );
 const ingredients = [
-  "Картошка",
-  "Грибы",
-  "Чеснок",
-  "Помидоры",
-  "Зелень",
-  "Приправы"
+    'Картошка',
+    'Грибы',
+    'Чеснок',
+    'Помидоры',
+    'Зелень',
+    'Приправы',
 ];
-let ulList = document.getElementById("ingredients");
-const foodIngredients = ingredients.forEach(ingredient => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredient;
-  ulList.append(items);
-  parent.append(...items)
-});
+const liArr = ingredients.map( elem => {
+    const li = document.createElement( `li` );
+    li.textContent = elem;
+    return li;
+} );
+ingredientsList.append( ...liArr );
+  
 
-console.log(foodIngredients);
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
